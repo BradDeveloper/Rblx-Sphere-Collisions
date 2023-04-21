@@ -1,15 +1,15 @@
 # Rblx-Sphere-Collisions
 Handles collisions for a sphere
 
-##Notice: Only UpVector collisions are handled as that is the only thing I needed for a project!
+**Notice: Only UpVector (Top) collisions are handled as that is the only thing I needed for a project.
 
-##Supported:
--Part
--Sphere
--Cylinder
--Wedge
--CornerWedge
+## Supported
+- Part
+- Sphere
+- Cylinder
+- Wedge
+- CornerWedge
 
-##Not Supported
--MeshParts
--SpecialMeshes
+## Not Supported
+- MeshPart
+- SpecialMesh
