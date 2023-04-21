@@ -40,7 +40,7 @@ end
 
 --Collision Functions
 --Handles a Box-Plane to Sphere Collision
---Returns new Vector3 outside of Box
+--Returns new Vector3 outside on surface
 function BoxSphereCollision(plane: BasePart, pos: Vector3, radius: number): Vector3
     local planeCFrame = plane.CFrame
     local planePos = planeCFrame.Position
@@ -60,7 +60,7 @@ function BoxSphereCollision(plane: BasePart, pos: Vector3, radius: number): Vect
 end
 
 --Handles a Cylinder-Plane to Sphere Collision
---Returns new Vector3 outside of Box
+--Returns new Vector3 outside on surface
 function CylinderSphereCollision(plane: BasePart, pos: Vector3, radius: number): Vector3
     local planeCFrame = plane.CFrame
     local planePos = planeCFrame.Position
@@ -86,7 +86,7 @@ function CylinderSphereCollision(plane: BasePart, pos: Vector3, radius: number):
 end
 
 --Handles a Sphere to Sphere Collision
---Returns new Vector3 outside of Box
+--Returns new Vector3 outside on surface
 function SphereSphereCollision(plane: BasePart, pos: Vector3, radius: number): Vector3
     local planeCFrame = plane.CFrame
     local planePos = planeCFrame.Position
@@ -105,7 +105,7 @@ function SphereSphereCollision(plane: BasePart, pos: Vector3, radius: number): V
 end
 
 --Handles a Wedge-Plane to Sphere Collision
---Returns new Vector3 outside of Box
+--Returns new Vector3 outside on surface
 function WedgeSphereCollision(plane: BasePart, pos: Vector3, radius: number): Vector3
     local planeCFrame = plane.CFrame
     local planePos = planeCFrame.Position
@@ -133,7 +133,7 @@ function WedgeSphereCollision(plane: BasePart, pos: Vector3, radius: number): Ve
 end
 
 --Handles a CornerWedge-Plane to Sphere Collision
---Returns new Vector3 outside of Box
+--Returns new Vector3 outside on surface
 function CornerWedgeSphereCollision(plane: BasePart, pos: Vector3, radius: number): Vector3
     local planeCFrame = plane.CFrame
     local planePos = planeCFrame.Position
