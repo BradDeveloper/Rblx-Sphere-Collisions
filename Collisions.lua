@@ -165,7 +165,7 @@ function CornerWedgeSphereCollision(plane: BasePart, pos: Vector3, radius: numbe
     end
 
     --Find which face to check collisions for
-    local cframeCA = CFrame.fromMatrix(planePos, vectCA, planeCFrame.UpVector)
+    local cframeCA = CFrame.fromMatrix(planePos, vectCA, vectUp)
     local isLeftFace = cframeCA:PointToObjectSpace(pos).Z > 0
     if isLeftFace then
         local normABC = GetTriangleNormal(vertA, vertB, vertC).Unit
