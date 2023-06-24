@@ -31,7 +31,7 @@ function ProjectPointToLine(a: Vector3, bv: Vector3, cv: Vector3): (Vector3, num
 end
 
 function GetTriangleNormal(a: Vector3, b: Vector3, c: Vector3): Vector3
-	return (b - a):Cross(c - b)
+	return (b - a):Cross(c - b).Unit
 end
 
 local function getSurfaceNormal(cf: CFrame, normalId: Vector3): Vector3
@@ -168,10 +168,10 @@ function CornerWedgeSphereCollision(plane: BasePart, pos: Vector3, radius: numbe
     local cframeCA = CFrame.fromMatrix(planePos, vectCA, vectUp)
     local isLeftFace = cframeCA:PointToObjectSpace(pos).Z > 0
     if isLeftFace then
-        local normABC = GetTriangleNormal(vertA, vertB, vertC).Unit
+        local normABC = GetTriangleNormal(vertA, vertB, vertC)
         return getPlaneCollide(normABC)
     else
-        local normACD = GetTriangleNormal(vertA, vertC, vertD).Unit
+        local normACD = GetTriangleNormal(vertA, vertC, vertD)
         return getPlaneCollide(normACD)
     end
 end
